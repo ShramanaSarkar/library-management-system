@@ -29,10 +29,8 @@ public class BookDao {
 	
 	public Book findByBookId(int bookId) {
 		Optional<Book> optional=bookRepository.findById(bookId);
-		if(optional.isPresent()) 
-			return optional.get();
-		return null;
-	}
+        return optional.orElse(null);
+    }
 	
 	public Book deleteBook(int bookId) {
 		Optional<Book> optional=bookRepository.findById(bookId);

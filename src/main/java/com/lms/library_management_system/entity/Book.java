@@ -18,10 +18,15 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bookId;
+
 	private String title;
+
 	private String author;
+
 	private LocalDateTime borrowedTime;
+
 	private LocalDateTime returnTime;
+
 	@ManyToOne
 	private User user;
 }

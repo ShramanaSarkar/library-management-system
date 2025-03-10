@@ -31,12 +31,12 @@ public class AddressController {
 	}
 	
 	@GetMapping("/{addressId}")
-	public ResponseEntity<ResponseStructure<Address>> findByAddressId(@PathVariable int adddressId){
-		return addressService.findByAddressId(adddressId);
+	public ResponseEntity<ResponseStructure<Address>> findByAddressId(@PathVariable int addressId){
+		return addressService.findByAddressId(addressId);
 	}
 	
 	@PutMapping("/{addressId}")
-	public ResponseEntity<ResponseStructure<Address>> updateAddress(@PathVariable int addressId,@RequestBody AddressDto addressDto){
+	public ResponseEntity<ResponseStructure<Address>> updateAddress(@PathVariable int addressId, @RequestBody AddressDto addressDto){
 		return addressService.updateAddress(addressId, addressDto);
 	}
 

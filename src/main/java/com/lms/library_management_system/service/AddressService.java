@@ -15,8 +15,10 @@ import com.lms.library_management_system.util.ResponseStructure;
 
 @Service
 public class AddressService {
+
 	@Autowired
 	private AddressDao addressDao;
+
 	@Autowired
 	private ModelMapper modelMapper;
 	
@@ -89,9 +91,4 @@ public class AddressService {
 			return new ResponseEntity<ResponseStructure<List<Address>>>(responseStructure,HttpStatus.BAD_REQUEST);
 		}
 	}
-	
-	
-	
-	
-
 }

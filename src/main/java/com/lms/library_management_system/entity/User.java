@@ -12,15 +12,19 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "user1")
+@Table
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
+
 	private String name;
-	private long phoneNumber;
+
+	private String phoneNumber;
+
 	private String email;
+
 	@OneToOne
 	private Address address;
 }
